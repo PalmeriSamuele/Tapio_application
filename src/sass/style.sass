@@ -1,0 +1,48 @@
+@import './_fonts.sass' 
+@import './_variables.sass'
+
+@import './components/_actions'
+@import './components/_todoitems'
+
+
+
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+#tapio-app
+
+    display: flex
+    margin: auto
+
+    header
+        
+        padding: 1rem
+        width: 33vw
+        position: fixed
+        top: 0
+        height: 100%
+        background-color: $dark-green
+        .header-title
+            display: flex
+            justify-content: center
+            #title-app
+                margin-top: 0.3rem
+                text-align: center
+                color: white
+            #logo
+                width: 100px
+
+    #todos-section
+      
+        padding: 2rem
+        width: 70vw
+        margin-left: 35vw
+        display: grid
+        flex-direction: column
+        gap: 1rem
+  
+     
