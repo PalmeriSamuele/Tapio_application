@@ -43,11 +43,12 @@ function App() {
       'Loading'
     ) : (
     <section id='tapio-app'>
+    
         <header>
-          <div id='profile-info'>
-            <img className='profile-picture' src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/E12KS1G65-W0168RE00G7-133faf432639-512.jpeg" alt="" />
-            <h2>Sam</h2>
-          </div>
+            <div id='profile-info'>
+              <img className='profile-picture' src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/E12KS1G65-W0168RE00G7-133faf432639-512.jpeg" alt="" />
+              <h2>Sam</h2>
+            </div>
             <div className='header-title'>
               <h1 id='title-app'>Tapio</h1>
               <img id='logo' src="https://tapioview.s3.amazonaws.com/static/img/logo-tapio-blue.png?AWSAccessKeyId=AKIAXL23VGMDKSIWWZ5W&Signature=oEB5WUMxzGzACmNGXVzHSh%2FwFLQ%3D&Expires=1993637960" alt="" />
