@@ -2,7 +2,7 @@
 @import './_variables.sass'
 
 @import './components/_actions'
-@import './components/_todoitems'
+@import './components/_posts'
 
 
 
@@ -12,6 +12,7 @@
     margin: 0
     padding: 0
     box-sizing: border-box
+    font-family: 'Montserrat', sans-serif
 
 #tapio-app
 
@@ -19,9 +20,15 @@
     margin: auto
 
     header
-        
+        #profile-info
+            display: flex
+           
+            .profile-picture
+                width: 70px
+                border-radius: 50%
+                margin: auto
         padding: 1rem
-        width: 33vw
+        width: 30vw
         position: fixed
         top: 0
         height: 100%
@@ -33,16 +40,19 @@
                 margin-top: 0.3rem
                 text-align: center
                 color: white
+                display: flex
+                align-items: center
             #logo
                 width: 100px
 
-    #todos-section
+    #posts-section
       
         padding: 2rem
         width: 70vw
-        margin-left: 35vw
-        display: grid
-        flex-direction: column
+        margin-left: 32vw
+        display: flex
+   
+        flex-wrap: wrap
         gap: 1rem
   
      
