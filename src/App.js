@@ -49,6 +49,7 @@ function App() {
             <div id='profile-info'>
               <img className='profile-picture' src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/E12KS1G65-W0168RE00G7-133faf432639-512.jpeg" alt="" />
               <h2>Sam</h2>
+              <button id='login-btn'>Connexion</button>
             </div>
             <div className='header-title'>
               <h1 id='title-app'>Tapio</h1>
@@ -62,7 +63,7 @@ function App() {
         <div id='posts-section'>
 
           {
-            posts.filter((_post) => (_post.title.toLowerCase().includes(searchInput.toLowerCase()))).map((post)=>{
+            posts.filter((_post) => (_post.title.toLowerCase().includes(searchInput.toLowerCase()) || _post.body.toLowerCase().includes(searchInput.toLowerCase()))).map((post)=>{
 
             return (
               <Posts eventCounter={eventCounter} setEventCounter={setEventCounter} post={post}/>

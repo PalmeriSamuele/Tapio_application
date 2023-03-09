@@ -2,6 +2,8 @@ import React from 'react';
 import UpdatePost from './UpdatePost';
 import Modal from 'antd/es/modal/Modal';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 const UpdateModal = (props) => {
@@ -18,7 +20,7 @@ const UpdateModal = (props) => {
     return (
         <>
             <button  id='update-post-btn' onClick={showModal}>
-                update
+            <FontAwesomeIcon icon={faPenToSquare} />
             </button>
             <Modal
                 title="Create a new post"

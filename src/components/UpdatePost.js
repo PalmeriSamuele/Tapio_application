@@ -36,12 +36,12 @@ const UpdatePost = (props) => {
     return (
         <Form layout='vertical' onFinish={updatePost}>
             <Form.Item label='Title' name='title' required={true}>
-                <Input placeholder={props.post.title} className="post-input">
+                <Input required={true} placeholder={props.post.title} className="post-input">
 
                 </Input>
             </Form.Item>
             <Form.Item label='Text' name='body' required={true}>
-                <TextArea rows={5} placeholder={props.post.body}>
+                <TextArea required={true} rows={5} placeholder={props.post.body}>
                 
                 </TextArea>
             </Form.Item>

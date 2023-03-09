@@ -1,6 +1,7 @@
 import React from 'react';
 import CreatePost from './CreatePost';
 import Modal from 'antd/es/modal/Modal';
+import { Button } from 'antd';
 import { useState } from 'react';
 const ModalForm = (props) => {
     const [open, setOpen] = useState(false);
@@ -15,9 +16,11 @@ const ModalForm = (props) => {
     
     return (
         <>
-            <button className='createevent-btn rounded' id='create-btn' onClick={showModal}>
+
+            <Button id='create-btn' type="primary" ghost onClick={showModal}>
                 create a post
-            </button>
+            </Button>
+
             <Modal
                 title="Create a new post"
                 open={open}
