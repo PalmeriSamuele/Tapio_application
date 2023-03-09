@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalForm from './ModalForm';
 
 const Actions = (props) => {
     const searchFunction = (e) => {
@@ -17,7 +18,7 @@ const Actions = (props) => {
                 <option value="true">Completed</option>
                 <option value="false">To Do</option>
             </select> */}
-            <button id='create-btn'>Create</button>
+            <ModalForm counter={props.eventCounter} setcounter={props.setEventCounter}/>
         </div>
     );
 };

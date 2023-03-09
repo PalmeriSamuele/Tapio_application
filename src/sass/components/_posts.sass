@@ -8,13 +8,14 @@
 
     
 #post-item
-    display: flex
+    display: grid
+    grid-template-columns: 1fr 4fr 1fr
     gap: 1rem
     background-color: rgb(222, 224, 222)
     filter: blur(80%)
     color: rgb(32, 27, 65)
     border-radius: 5px
-    width: 70%
+    width: 100%
    
     #profile-div
         background-color: $dark-blue
@@ -31,10 +32,18 @@
             text-align: center
             margin-top: 0.5rem
             color: white
-
+    .post-info
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        #update-post-btn
+            color: rgb(26, 55, 151)
+            font-size: 12px
+            align-self: start
     .post-title
         margin-top: 0.4rem
         font-size: 1.3rem
+        color: $dark-blue
     .post-text
         display: flex
         align-items: center
@@ -42,6 +51,11 @@
         margin-top: 0.4rem
     .delete-box
         padding: 0.5rem
+        justify-self: end
+    .update-post-btn
+        font-size: 0.8rem
+        
+        color: rgb(86, 94, 212)
 
 
 

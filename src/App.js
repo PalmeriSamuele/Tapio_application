@@ -29,10 +29,10 @@ function App() {
           }));        
           
           setPosts(data);
+          console.log(posts);
+          setLoading(false);
       } catch (err) {
           console.error(err);
-      } finally {
-          setLoading(false);
       }
     };
   
