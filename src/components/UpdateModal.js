@@ -27,7 +27,7 @@ const UpdateModal = (props) => {
                 onCancel={handleCancel}  
                 footer={null}
             >
-            <UpdatePost counter={props.counter} setcounter={props.setcounter} post={props.post}/>
+            <UpdatePost setmodal={setOpen} counter={props.counter} setcounter={props.setcounter} post={props.post}/>
     
             </Modal>
         </>

@@ -2,24 +2,30 @@ import React, { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { Alert, notification } from "antd";
 
 import { users } from "../Users/users";
 import UpdateModal from "./UpdateModal";
 
 const Posts = (props) => {
   const [profile, setProfile] = [users[props.post.userId - 1]];
-  console.log(profile);
   const truncate = function (str) {
     return str.length > 60 ? str.substring(0, 59) + "..." : str;
   };
 
-  const deletePost = async () => {
+  const deletePost = async (e) => {
+    console.log(e);
+    notification.open({
+        message: 'Post deleted !',
+        duration: 4,
+        placement: "bottomLeft",
+        className: 'notification-delete'
+      });
     const id = props.post.id;
     const res = await axios
       .delete(`http://localhost:3000/posts/${id}`)
       .then((response) => {
         props.setEventCounter(props.eventCounter + 1);
-        alert("Post deleted");
       })
       .catch((error) => {
         console.log(error);
@@ -44,7 +50,7 @@ const Posts = (props) => {
 
       <div className="delete-box">
         <button className="delete-btn">
-          <FontAwesomeIcon icon={faXmark} onClick={deletePost} />
+          <FontAwesomeIcon icon={faXmark} onClick={(e) => deletePost(e)} />
         </button>
       </div>
     </div>

@@ -1,11 +1,19 @@
 import React from 'react';
-import {Form, Button, Input} from 'antd'
+import {Form, Button, Input , notification} from 'antd'
 import axios from 'axios';
+
 const UpdatePost = (props) => {
     const { TextArea } = Input;
     const updatePost = (values) => {
-        console.log(values)
-        // manipulate the data that they can be use for the database
+       // notification 
+        notification.open({
+            message: 'The post has been updated !',
+            duration: 5,
+            placement: "bottomLeft",
+            className: 'notification-update'
+            
+        });
+        // create the new data
         values = {
 
             userId: 1,
@@ -16,20 +24,19 @@ const UpdatePost = (props) => {
         axios.put(`http://localhost:3000/posts/${props.post.id}`, values)
         .then(response => {
             props.setcounter(props.counter+1); // event encoutner to make the database call and get the new data
-            alert('Post updated !')
             // props.setdata({...props.data,...response.data});
             // props.setfilter({...props.filter, ...response.data});
         })
         .catch(error => {
             console.log(error);
         });
-        console.log(values);
+        props.setmodal(false)
   
       }
     return (
         <Form layout='vertical' onFinish={updatePost}>
             <Form.Item label='Title' name='title' required={true}>
-                <Input placeholder={props.post.title}>
+                <Input placeholder={props.post.title} className="post-input">
 
                 </Input>
             </Form.Item>

@@ -1,3 +1,5 @@
+
+    
 .status
     transform: scale(1.6)
     display: flex
@@ -11,7 +13,7 @@
     display: grid
     grid-template-columns: 1fr 4fr 1fr
     gap: 1rem
-    background-color: rgb(222, 224, 222)
+    background-color: $trans-blue
     filter: blur(80%)
     color: rgb(32, 27, 65)
     border-radius: 5px
@@ -56,6 +58,7 @@
         font-size: 0.8rem
         
         color: rgb(86, 94, 212)
+        border-bottom: 1px solid
 
 
 
@@ -63,7 +66,21 @@
     .delete-btn
         color: $dark-blue
         align-self: end
+        &:hover
+            color: red
+            animation: spinner 2000ms linear infinite
     p
         margin: 0
         font-size: 1rem
-   
+
+@keyframes spinner 
+    
+  0% 
+    -webkit-transform: rotate(0deg)
+            transform: rotate(0deg)
+  
+  100% 
+    -webkit-transform: rotate(360deg)
+            transform: rotate(360deg)
+  
+

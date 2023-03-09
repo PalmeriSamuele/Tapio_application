@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Actions from './components/Actions';
 import Posts from './components/Posts';
+import { Alert } from 'antd';
 
 
 
@@ -43,7 +44,7 @@ function App() {
       'Loading'
     ) : (
     <section id='tapio-app'>
-    
+
         <header>
             <div id='profile-info'>
               <img className='profile-picture' src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/E12KS1G65-W0168RE00G7-133faf432639-512.jpeg" alt="" />
@@ -59,6 +60,7 @@ function App() {
 
 
         <div id='posts-section'>
+
           {
             posts.filter((_post) => (_post.title.toLowerCase().includes(searchInput.toLowerCase()))).map((post)=>{
 
@@ -67,6 +69,7 @@ function App() {
             )
           })}
         </div>
+
     </section>
   ));
 }

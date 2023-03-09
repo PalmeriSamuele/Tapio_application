@@ -25,7 +25,7 @@ const ModalForm = (props) => {
                 onCancel={handleCancel}  
                 footer={null}
             >
-            <CreatePost counter={props.counter} setcounter={props.setcounter} />
+            <CreatePost setmodal={setOpen} counter={props.counter} setcounter={props.setcounter} />
     
             </Modal>
         </>
