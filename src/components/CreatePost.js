@@ -10,7 +10,7 @@ const CreatePost = (props) => {
         notification.open({
             message: 'Votre nouveau commentaire a été publié !',
             duration: 5,
-            placement: "bottomLeft",
+            placement: "topRight",
             className: 'notification-create'
             
         });

@@ -19,22 +19,27 @@
     display: flex
     margin: auto
 
+    background: rgb(17,29,41)
+    background: linear-gradient(180deg, rgba(17,29,41,1) 0%, rgba(0,78,108,1) 100%)
+    // background-repeat: repeat
+    background-attachment: fixed
     header
         padding: 1rem
         width: 30vw
         position: fixed
         top: 0
         height: 100%
-        background: rgb(22,70,84)
-        background: linear-gradient(42deg, rgba(22,70,84,1) 11%, rgba(30,88,104,1) 35%, rgba(43,100,115,1) 52%, rgba(48,106,122,1) 65%, rgba(31,84,99,1) 89%)
+        background: rgb(13, 57, 71)
+        background: linear-gradient(42deg, #143d49 11%, #154a59 35%, #215b6b 52%, #316c7c 65%, rgba(31,84,99,1) 89%)
 
-        box-shadow: 3px 0px 10px -1px #424e5f
+        // box-shadow: 3px 0px 10px -1px #424e5f
         #profile-info
             display: grid
             grid-template-columns: 1fr 5fr 1fr
             align-items: center
             gap: 0.6rem
             background-color: white
+
             padding: 0.3rem
             border-radius: 6px
             margin-bottom: 1rem
@@ -70,32 +75,41 @@
                 width: 100px
 
     #posts-section
-      
-        padding: 2rem
-        width: 70vw
-        margin-left: 31vw
+        margin-left: 33vw
+        margin-top: 1.2rem
         display: flex
-   
-        flex-wrap: wrap
-        gap: 1rem
+        flex-direction: column
+        gap: 1.2rem 
+        min-height: 100vh
+       
+        .posts
+            border-radius: 5px
+            padding-right: 1rem
 
+            display: flex
+            flex-wrap: wrap
+            gap: 1rem
+
+            
         .title-section
-            color: rgba(101, 165, 193, 0.682)
+            color: rgb(161, 185, 196)
             position: relative
             &::after
                 content: ''
                 position: absolute
-                bottom: -20%
+                bottom: -28%
                 left: 0
-                width: 10rem
+                width: 8rem
                 height: 7px
                 border-radius: 10px
-                background-color: rgba(33, 106, 123, 0.822)
+                background-color: rgba(71, 132, 146, 0.822)
 
 .notification-create
     background-color: rgba(163, 217, 162, 1)
 .notification-delete
     background-color: rgba(163, 217, 162,1)
+.notification-delete-error
+    background-color: #cc775e
 .notification-update
     background-color: rgba(56, 163, 192, 1)
 
@@ -105,3 +119,34 @@
     transition: all 0.3s ease
     &:hover
         background-color: white
+
+footer
+    color: white
+    text-align: center
+    font-family: 'Unbounded', 'Montserrat'
+    padding: 1rem
+.navbar-dark
+    display: none
+
+
+@media (max-width: 769px) 
+    #tapio-app
+        flex-direction: column
+        header
+
+            position: static
+
+            top: 0
+            width: 100%
+            height: 30%
+        #posts-section
+            margin-left: 1rem
+
+@media (max-width: 426px) 
+    #tapio-app
+        display: block
+        header
+            background: none
+           
+        #posts-section
+            margin-left: 1rem

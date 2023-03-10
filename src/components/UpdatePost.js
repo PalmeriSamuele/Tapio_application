@@ -9,14 +9,14 @@ const UpdatePost = (props) => {
         notification.open({
             message: 'Le commentaire a été modifié ! ',
             duration: 5,
-            placement: "bottomLeft",
+            placement: "topRight",
             className: 'notification-update'
             
         });
         // create the new data
         values = {
 
-            userId: 1,
+            userId: 2,
             title: values.title,
             body: values.body,
 

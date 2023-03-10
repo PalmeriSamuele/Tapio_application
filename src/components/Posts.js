@@ -14,22 +14,36 @@ const Posts = (props) => {
   };
 
   const deletePost = async (e) => {
-    console.log(e);
-    notification.open({
-        message: 'Le commentaire a été supprimé !',
-        duration: 4,
-        placement: "bottomLeft",
-        className: 'notification-delete'
-      });
-    const id = props.post.id;
-    const res = await axios
-      .delete(`http://localhost:3000/posts/${id}`)
-      .then((response) => {
-        props.setEventCounter(props.eventCounter + 1);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    console.log(props.post.userId)
+    if(props.post.userId == 2){
+        
+        notification.open({
+            message: 'Le commentaire a été supprimé !',
+            duration: 4,
+            placement: "topRight",
+            className: 'notification-delete'
+          });
+        const id = props.post.id;
+        const res = await axios
+          .delete(`http://localhost:3000/posts/${id}`)
+          .then((response) => {
+            props.setEventCounter(props.eventCounter + 1);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+    }
+    else{
+        
+        notification.open({
+            message: 'Ce commentaire ne vous appartient pas !',
+            duration: 4,
+            placement: "topRight",
+            className: 'notification-delete-error'
+          });
+
+    }
+
   };
 
   return (

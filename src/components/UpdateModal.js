@@ -4,23 +4,29 @@ import Modal from 'antd/es/modal/Modal';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { notification } from 'antd';
 
 
 const UpdateModal = (props) => {
     const [open, setOpen] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
     const showModal = () => {
-        setOpen(true);
+        props.post.userId == 2 ?  setOpen(true): notification.open({
+            message: 'Vous ne pouvez pas modifier ce commentaire !',
+            duration: 4,
+            placement: "bottomLeft",
+            className: 'notification-delete-error'
+        });
     };
     
     const handleCancel = () => {
-        setOpen(false);
+        props.post.userId == 2 ?  setOpen(false): setOpen(true);
     };
     
     return (
         <>
             <button  id='update-post-btn' onClick={showModal} title="modifier">
-            <FontAwesomeIcon icon={faPenToSquare} />
+                <FontAwesomeIcon icon={faPenToSquare} />
             </button>
             <Modal
                 title="Modifie ton commentaire"

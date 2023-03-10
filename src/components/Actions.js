@@ -16,7 +16,7 @@ const Actions = (props) => {
     
     return (
         <div id='actions-section'>
-            <Search placeholder='Rechercher un commentaire ...' onChange={(e) => searchFunction(e)} loading />
+            <Input placeholder='Rechercher un commentaire ...' onChange={(e) => searchFunction(e)} allowClear  />
             {/* <select name="" id="sort-btn" onChange={(e) => sortFunction(e)}>
                 <option value="">All</option>
                 <option value="true">Completed</option>
