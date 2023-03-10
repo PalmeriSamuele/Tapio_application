@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Tapio_application/static/css/main.f8bba1f0.css",
+    "main.js": "/Tapio_application/static/js/main.323ab063.js",
+    "index.html": "/Tapio_application/index.html",
+    "static/media/facebook.svg": "/Tapio_application/static/media/facebook.19ba143b89841a8ef5fd4fe64ad811f0.svg",
+    "main.f8bba1f0.css.map": "/Tapio_application/static/css/main.f8bba1f0.css.map",
+    "main.323ab063.js.map": "/Tapio_application/static/js/main.323ab063.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8bba1f0.css",
+    "static/js/main.323ab063.js"
+  ]
+}
