@@ -15,7 +15,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [eventCounter, setEventCounter] = useState(0);
 
-
+  // fontion qui recupere les donnees
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,8 +29,8 @@ function App() {
 
           }));        
           
-          setPosts(data);
-          console.log(posts);
+          setPosts(data.reverse()); // on recupere les donnees dans le sens inverse pour avoir les plus recent en premier
+       
           setLoading(false);
       } catch (err) {
           console.error(err);
@@ -61,7 +61,7 @@ function App() {
 
 
         <div id='posts-section'>
-
+          <h2 className='title-section'>Commentaires</h2>
           {
             posts.filter((_post) => (_post.title.toLowerCase().includes(searchInput.toLowerCase()) || _post.body.toLowerCase().includes(searchInput.toLowerCase()))).map((post)=>{
 

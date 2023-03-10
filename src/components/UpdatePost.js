@@ -7,7 +7,7 @@ const UpdatePost = (props) => {
     const updatePost = (values) => {
        // notification 
         notification.open({
-            message: 'The post has been updated !',
+            message: 'Le commentaire a été modifié ! ',
             duration: 5,
             placement: "bottomLeft",
             className: 'notification-update'
@@ -35,18 +35,18 @@ const UpdatePost = (props) => {
       }
     return (
         <Form layout='vertical' onFinish={updatePost}>
-            <Form.Item label='Title' name='title' required={true}>
+            <Form.Item label='Titre' name='title' required={true}>
                 <Input required={true} placeholder={props.post.title} className="post-input">
 
                 </Input>
             </Form.Item>
-            <Form.Item label='Text' name='body' required={true}>
+            <Form.Item label='Commentaire' name='body' required={true}>
                 <TextArea required={true} rows={5} placeholder={props.post.body}>
                 
                 </TextArea>
             </Form.Item>
-            <Button htmlType='submit' type='primary'>
-                update
+            <Button htmlType='submit' className='post-form-btn'>
+                modifier
             </Button>
         </Form>
     );

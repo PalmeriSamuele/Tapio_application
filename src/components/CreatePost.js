@@ -3,10 +3,12 @@ import {Form, Button, Input, notification} from 'antd'
 import axios from 'axios';
 const CreatePost = (props) => {
     const { TextArea } = Input;
+
+    // fomnction qui va creer un commentaire 
     const createPost = async (values) => {
          // notification 
         notification.open({
-            message: 'The post has successfully been created !',
+            message: 'Votre nouveau commentaire a été publié !',
             duration: 5,
             placement: "bottomLeft",
             className: 'notification-create'
@@ -38,18 +40,18 @@ const CreatePost = (props) => {
       }
     return (
         <Form layout='vertical' onFinish={createPost}>
-            <Form.Item label='Title' name='title' required={true}>
-                <Input  required={true} placeholder='type a title for your post...'>
+            <Form.Item label='Titre' name='title' required={true}>
+                <Input  required={true} placeholder='Ecris un titre ici ...'>
 
                 </Input>
             </Form.Item>
-            <Form.Item label='Body' name='body' required={true}>
-                <TextArea  required={true} placeholder='type your post...' rows={5}>
+            <Form.Item label='Commentaire' name='body' required={true}>
+                <TextArea  required={true} placeholder='Ecris ton commentaire ici...' rows={5}>
 
                 </TextArea>
             </Form.Item>
-            <Button htmlType='submit' type='primary'>
-                create
+            <Button htmlType='submit' className='post-form-btn'>
+                poster
             </Button>
         </Form>
     );

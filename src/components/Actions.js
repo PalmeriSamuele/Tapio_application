@@ -1,6 +1,9 @@
 import React from 'react';
 import ModalForm from './ModalForm';
 import { Input } from 'antd';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import FaFacebook from '../Svg/facebook.svg'
+import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 const Actions = (props) => {
     const {Search} = Input
     const searchFunction = (e) => {
@@ -13,14 +16,21 @@ const Actions = (props) => {
     
     return (
         <div id='actions-section'>
-            <Search placeholder='Search a post...' onChange={(e) => searchFunction(e)} loading />
+            <Search placeholder='Rechercher un commentaire ...' onChange={(e) => searchFunction(e)} loading />
             {/* <select name="" id="sort-btn" onChange={(e) => sortFunction(e)}>
                 <option value="">All</option>
                 <option value="true">Completed</option>
                 <option value="false">To Do</option>
             </select> */}
-
-            <ModalForm counter={props.eventCounter} setcounter={props.setEventCounter}/>
+            <div id='footer-header'>
+                <div className='social-box'>
+                    <a href="https://www.facebook.com/TapioView/" target='_blank'> <FontAwesomeIcon className='social-icon' icon={faFacebook} /></a>
+                    <a href="https://www.instagram.com/tapioview/" target='_blank'><FontAwesomeIcon className='social-icon' icon={faInstagram} /></a>
+                    <a href="https://www.linkedin.com/in/samuele-palmeri-a50809206/" target='_blank'> <FontAwesomeIcon className='social-icon' icon={faLinkedin} /></a>
+                </div>
+                <ModalForm counter={props.eventCounter} setcounter={props.setEventCounter}/>
+            </div>
+          
         </div>
     );
 };

@@ -19,11 +19,11 @@ const UpdateModal = (props) => {
     
     return (
         <>
-            <button  id='update-post-btn' onClick={showModal}>
+            <button  id='update-post-btn' onClick={showModal} title="modifier">
             <FontAwesomeIcon icon={faPenToSquare} />
             </button>
             <Modal
-                title="Create a new post"
+                title="Modifie ton commentaire"
                 open={open}
                 confirmLoading={confirmLoading}
                 onCancel={handleCancel}  

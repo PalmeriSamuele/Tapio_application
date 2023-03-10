@@ -16,7 +16,7 @@ const Posts = (props) => {
   const deletePost = async (e) => {
     console.log(e);
     notification.open({
-        message: 'Post deleted !',
+        message: 'Le commentaire a été supprimé !',
         duration: 4,
         placement: "bottomLeft",
         className: 'notification-delete'
@@ -49,7 +49,7 @@ const Posts = (props) => {
       </div>
 
       <div className="delete-box">
-        <button className="delete-btn">
+        <button className="delete-btn" title="supprimer">
           <FontAwesomeIcon icon={faXmark} onClick={(e) => deletePost(e)} />
         </button>
       </div>

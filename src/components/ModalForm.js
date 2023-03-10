@@ -18,11 +18,11 @@ const ModalForm = (props) => {
         <>
 
             <Button id='create-btn' type="primary" ghost onClick={showModal}>
-                create a post
+                ecrire un post
             </Button>
 
             <Modal
-                title="Create a new post"
+                title="Crée un nouveau commentaire"
                 open={open}
                 confirmLoading={confirmLoading}
                 onCancel={handleCancel}  

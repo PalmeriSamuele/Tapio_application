@@ -13,11 +13,12 @@
     display: grid
     grid-template-columns: 1fr 4fr 1fr
     gap: 1rem
-    background-color: $trans-blue
+    background-color: lighten($trans-blue, 8%)
     filter: blur(80%)
     color: rgb(32, 27, 65)
     border-radius: 5px
     width: 100%
+    box-shadow: 0px 0px 11px 0px rgba(32, 80, 135, 0.42)
    
     #profile-div
         background-color: $dark-green
@@ -25,6 +26,7 @@
         padding: 1rem
         display: flex
         flex-direction: column
+        width: 10rem
         .profile-picture
             width: 70px
             border-radius: 50%
