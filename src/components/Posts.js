@@ -25,7 +25,7 @@ const Posts = (props) => {
           });
         const id = props.post.id;
         const res = await axios
-          .delete(`http://localhost:3000/posts/${id}`)
+          .delete(`https://tapio-posts.onrender.com/posts/${id}`)
           .then((response) => {
             props.setEventCounter(props.eventCounter + 1);
           })

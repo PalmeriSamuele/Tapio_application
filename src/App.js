@@ -3,6 +3,7 @@ import axios from "axios";
 import Actions from "./components/Actions";
 import Posts from "./components/Posts";
 import { Alert } from "antd";
+import SwitchMode from "./components/SwitchMode";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
@@ -16,7 +17,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/posts");
+        const res = await axios.get("https://tapio-posts.onrender.com/posts");
+        console.log(res.data);
         const data = res.data.map((row) => ({
           key: row.id,
           userId: row.userId,
@@ -26,7 +28,7 @@ function App() {
         }));
 
         setPosts(data.reverse()); // on recupere les donnees dans le sens inverse pour avoir les plus recent en premier
-
+        console.log(data);
         setLoading(false);
       } catch (err) {
         console.error(err);
@@ -39,28 +41,8 @@ function App() {
     "Loading"
   ) : (
     <main>
-      <section id="tapio-app">
-        {/* <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <h5 class="text-white h4">Collapsed content</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-          </div>
-        </div> */}
-        <nav class="navbar navbar-dark bg-dark">
-          <div class="container-fluid">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarToggleExternalContent"
-              aria-controls="navbarToggleExternalContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-        </nav>
+      <section id="tapio-app" className="light">
+
         <header  id="navbarToggleExternalContent">
           <div id="profile-info">
             <img
@@ -111,6 +93,7 @@ function App() {
           <footer>By Palmeri Samuele for Tapio</footer>
         </div>
       </section>
+      <SwitchMode  />
     </main>
   );
 }

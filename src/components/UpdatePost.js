@@ -21,7 +21,7 @@ const UpdatePost = (props) => {
             body: values.body,
 
         }
-        axios.put(`http://localhost:3000/posts/${props.post.id}`, values)
+        axios.put(`https://tapio-posts.onrender.com/posts/${props.post.id}`, values)
         .then(response => {
             props.setcounter(props.counter+1); // event encoutner to make the database call and get the new data
             // props.setdata({...props.data,...response.data});

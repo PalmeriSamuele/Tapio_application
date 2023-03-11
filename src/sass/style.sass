@@ -19,9 +19,7 @@
     display: flex
     margin: auto
 
-    background: rgb(17,29,41)
-    background: linear-gradient(180deg, rgba(17,29,41,1) 0%, rgba(0,78,108,1) 100%)
-    // background-repeat: repeat
+    transition: background-color -.5s ease-in
     background-attachment: fixed
     header
         padding: 1rem
@@ -30,7 +28,7 @@
         top: 0
         height: 100%
         background: rgb(13, 57, 71)
-        background: linear-gradient(42deg, #143d49 11%, #154a59 35%, #215b6b 52%, #316c7c 65%, rgba(31,84,99,1) 89%)
+        background: linear-gradient(42deg, #25505d 11%, #326573 35%, #3a707e 52%, #376b79 65%, #3b6f7d 89%)
 
         // box-shadow: 3px 0px 10px -1px #424e5f
         #profile-info
@@ -92,7 +90,7 @@
 
             
         .title-section
-            color: rgb(161, 185, 196)
+            color: rgb(70, 108, 125)
             position: relative
             &::after
                 content: ''
@@ -119,14 +117,27 @@
     transition: all 0.3s ease
     &:hover
         background-color: white
-
+.switch-mode
+    position: absolute
+    top: 5%
+    right: 5%
 footer
-    color: white
+    color: rgb(70, 108, 125)
     text-align: center
     font-family: 'Unbounded', 'Montserrat'
     padding: 1rem
 .navbar-dark
     display: none
+
+
+    // dark mode
+.light 
+    background: rgb(225, 236, 236)
+    background: linear-gradient(180deg, #e9eeee 0%, #e0e0e0 100%)  
+.dark 
+    background: #111d29
+    background: linear-gradient(180deg,#111d29,#0d3e51)
+
 
 
 @media (max-width: 769px) 

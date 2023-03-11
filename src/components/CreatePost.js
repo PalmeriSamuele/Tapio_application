@@ -23,7 +23,7 @@ const CreatePost = (props) => {
 
         }
         try {
-            const res = await axios.post('http://localhost:3000/posts', values)
+            const res = await axios.post('https://tapio-posts.onrender.com/posts', values)
             .then(response => {
                 props.setcounter(props.counter+1); // event encoutner to make the database call and get the new data
                
