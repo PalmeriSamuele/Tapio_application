@@ -4,6 +4,8 @@ import { Input } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FaFacebook from '../Svg/facebook.svg'
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import SwitchMode from './SwitchMode';
+
 const Actions = (props) => {
     const {Search} = Input
     const searchFunction = (e) => {
@@ -22,12 +24,14 @@ const Actions = (props) => {
                 <option value="true">Completed</option>
                 <option value="false">To Do</option>
             </select> */}
+            <SwitchMode  />
             <div id='footer-header'>
                 <div className='social-box'>
                     <a href="https://www.facebook.com/TapioView/" target='_blank'> <FontAwesomeIcon className='social-icon' icon={faFacebook} /></a>
                     <a href="https://www.instagram.com/tapioview/" target='_blank'><FontAwesomeIcon className='social-icon' icon={faInstagram} /></a>
                     <a href="https://www.linkedin.com/in/samuele-palmeri-a50809206/" target='_blank'> <FontAwesomeIcon className='social-icon' icon={faLinkedin} /></a>
                 </div>
+                
                 <ModalForm counter={props.eventCounter} setcounter={props.setEventCounter}/>
             </div>
           

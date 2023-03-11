@@ -93,7 +93,7 @@ function App() {
           <footer>By Palmeri Samuele for Tapio</footer>
         </div>
       </section>
-      <SwitchMode  />
+      
     </main>
   );
 }

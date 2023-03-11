@@ -18,7 +18,7 @@ const ModalForm = (props) => {
         <>
 
             <Button id='create-btn' type="primary" ghost onClick={showModal}>
-                ecrire un post
+                écrire un post
             </Button>
 
             <Modal
