@@ -41,7 +41,7 @@ const CreatePost = (props) => {
     return (
         <Form layout='vertical' onFinish={createPost}>
             <Form.Item label='Titre' name='title' required={true}>
-                <Input  required={true} placeholder='Ecris un titre ici ...'>
+                <Input  required={true} placeholder='Ecris ton titre ici ...'>
 
                 </Input>
             </Form.Item>

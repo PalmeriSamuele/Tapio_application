@@ -10,6 +10,7 @@
 
     
 #post-item
+    
     display: grid
     grid-template-columns: 1fr 4fr 1fr
     gap: 1rem
@@ -19,7 +20,9 @@
     border-radius: 5px
     
     box-shadow: 0px 0px 11px 0px rgba(32, 80, 135, 0.42)
-    width: 48%
+    
+    min-height: 10rem
+    position: relative
     #profile-div
         background-color: $dark-green
         border-top-left-radius: 5px
@@ -57,9 +60,13 @@
         justify-content: center
         margin-top: 0.4rem
         font-size: 1rem
+        
+        
     .delete-box
         padding: 0.5rem
-        justify-self: end
+        position: absolute 
+        top: 2%
+        right: 2%
 
        
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Actions from "./components/Actions";
 import Posts from "./components/Posts";
-import { Alert } from "antd";
+import { Spin } from "antd";
 import SwitchMode from "./components/SwitchMode";
 
 function App() {
@@ -38,7 +38,13 @@ function App() {
     fetchData();
   }, [eventCounter]);
   return loading ? (
-    "Loading"
+    <section className="loading-page">
+      <h2 className="loading-title">Datas arent load yet, try to refresh  </h2>
+      
+      <Spin size="large">
+        <div className="content" />
+      </Spin>
+    </section>
   ) : (
     <main>
       <section id="tapio-app" className="light">
